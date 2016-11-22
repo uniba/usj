@@ -1,0 +1,11 @@
+/.bundle
+/build
+/.tmp
+/.sass-cache
+/.cache
+.DS_Store
+/log/*.log
+/vendor/bundle
+/node_modules
+npm-debug.log
+.envrc
