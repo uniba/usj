@@ -1,0 +1,21 @@
+
+machine:
+  ruby:
+    version: 2.3.3
+  node:
+    version: 7.1.0
+
+dependencies:
+  override:
+    - bundle install
+    - npm install
+
+test:
+  override:
+    - ':'
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - make deploy
