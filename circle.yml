@@ -1,14 +1,21 @@
 
 machine:
+  pre:
+    - mkdir ~/.yarn-cache
   ruby:
     version: 2.3.3
   node:
     version: 7.1.0
 
 dependencies:
+  pre:
+    - npm install -g yarn
+    - yarn install
+  cache_directories:
+    - ~/.yarn-cache
   override:
     - bundle install
-    - npm install
+    - yarn install
 
 test:
   override:
