@@ -1,18 +1,15 @@
 
 machine:
-  pre:
-    - mkdir ~/.yarn-cache
   ruby:
     version: 2.3.3
   node:
-    version: 7.1.0
+    version: 7.2.0
+  post:
+    - curl -o- -L https://yarnpkg.com/install.sh | bash
 
 dependencies:
-  pre:
-    - npm install -g yarn
-    - yarn install
   cache_directories:
-    - ~/.yarn-cache
+    - ~/.cache/yarn
   override:
     - bundle install
     - yarn install
